@@ -1,0 +1,17 @@
+name: Auto Add Issue to Project
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  add-to-project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add Issue to Project Board
+        uses: alex-page/github-project-automation-plus@v0.8.1
+        with:
+          project: 'DevOps' # Replace with your project name
+          column: 'Title'              # Replace with the column name you want the issue to go to
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
