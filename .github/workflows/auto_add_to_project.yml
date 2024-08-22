@@ -16,4 +16,4 @@ jobs:
         with:
           project: DevOps
           column: Title
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.GHPROJECT_TOKEN }}
