@@ -3,16 +3,12 @@ name: Auto Add Issue to Project
 on:
   issues:
     types: [opened]
-
-permissions:
-  issues: write
-  contents: read
   
 jobs:
   automate-project-columns:
     runs-on: ubuntu-latest
     steps:
-      - uses: alex-page/github-project-automation-plus@v0.8.3
+      - uses: alex-page/github-project-automation-plus@v0.9.0
         with:
           project: DevOps
           column: Title
