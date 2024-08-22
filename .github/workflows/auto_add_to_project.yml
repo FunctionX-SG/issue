@@ -9,13 +9,11 @@ permissions:
   contents: read
   
 jobs:
-  add-to-project:
+  automate-project-columns:
     runs-on: ubuntu-latest
     steps:
-      - name: Add Issue to Project Board
-        uses: alex-page/github-project-automation-plus@v0.8.1
+      - uses: alex-page/github-project-automation-plus@v0.8.3
         with:
-          project: 'DevOps' # Replace with your project name
-          column: 'Title'              # Replace with the column name you want the issue to go to
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          project: DevOps
+          column: Title
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
